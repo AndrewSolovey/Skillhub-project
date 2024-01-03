@@ -16,20 +16,21 @@ body {
     width: auto;
 }
 
-*/ .nav_component {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: auto;
+/* Navbar (sit on top) */
+.nav_component {
     display: flex;
+    position: absolute;
+    /* relative to body */
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: auto;
     overflow: hidden;
     width: 100%;
     height: 6rem;
     /* 96px */
-    padding-right: 2.5rem;
+    padding: 0 2.5rem;
     /* 40px */
-    padding-left: 2.5rem;
     background-color: transparent;
 }
 
@@ -37,15 +38,28 @@ body {
     display: flex;
     width: 100%;
     max-width: 73.5rem;
-    /* 1176px */
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
 }
 
+.nav_logo {
+    max-width: 100%;
+}
+
+.nav_link-wrapper {
+    display: flex;
+    position: relative;
+    /* relative to nav_compomemt */
+    width: auto;
+}
+
 ul {
     list-style-type: none;
+}
+
+li {
+    display: inline;
 }
 
 .nav_Link {
@@ -56,19 +70,165 @@ ul {
 .nav_Link a {
     text-decoration: none;
     color: var(--midnight-blue);
+    font-size: 18px;
     line-height: 28px;
     font-weight: 400;
 }
 
-.nav-Link:hover {
-    color: #3fba96;
+.nav_Link a:hover {
+    color: var(--medium-aquamarine);
+}
+
+.nav_button-wrapper {
+    display: flex;
+    width: auto;
 }
 
 .button-nav {
     padding: 12px 46px;
-
+    border: 1px solid var(--medium-aquamarine);
+    border-radius: 4px;
+    background-color: var(--medium-aquamarine);
+    color: var(--white);
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.nav_link-wrapper {
+.button-nav:hover {
+    background-color: white;
+    color: var(--medium-aquamarine);
+}
+
+/* The second section Grow yourself */
+.main-wrapper {
     display: flex;
+    position: static;
+}
+
+.section-home-header {
+    padding-top: 4rem;
+    padding-bottom: 0rem;
+    background-color: transparent;
+}
+
+.page-padding {
+    padding: 0 2.5rem;
+}
+
+.container-large {
+    display: flex;
+    position: static;
+    width: 100%;
+    max-width: 73.25rem;
+    /* 1172 */
+    margin: 0 auto;
+}
+
+.padding-vertical {
+    padding: 8rem 0 6rem 0;
+    /* 128px 96px */
+}
+
+.home-header-component {
+    display: flex;
+}
+
+.home-header_grid {
+    display: grid;
+    justify-items: stretch;
+    justify-content: space-between;
+    grid-auto-columns: 1fr;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.home-header_content-left .home-header_content-right {
+    display: grid;
+    position: static;
+    align-content: center;
+    justify-content: center;
+}
+
+.margin-small {
+    margin-bottom: 1rem;
+}
+
+.margin-medium {
+    margin-bottom: 2rem;
+}
+
+.margin-large {
+    margin-bottom: 4rem;
+}
+
+.anim-wrap {
+    overflow: hidden;
+}
+
+.text-size-medium {
+    color: #3fba96;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.Heading1 {
+    margin: 0 0;
+    font-size: 62px;
+    line-height: 120%;
+}
+
+.paragraph-normal {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.header-form-wrapper,
+.header-form-block {
+    display: grid;
+    position: static;
+}
+
+.header-form-block {
+    display: grid;
+    margin-bottom: 15px;
+}
+
+.header-form {
+    position: relative;
+}
+
+input[type=text] {
+    max-width: 100%;
+    background-color: white;
+    background-image: url('../images/search_icon.png');
+    background-position: 16px auto 0% 12px;
+    background-repeat: no-repeat;
+    height: 60px;
+    margin: 0;
+    padding: 0 12px 0 40px;
+    border-radius: 8px;
+}
+
+input[type=button] {
+    position: absolute;
+    left: auto;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    padding: 10px 60px 10px 60px;
+    border-radius: 4px;
+    background-color: #3fba96;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.grow_yourself {
+    display: grid;
+    width: 100%;
+    max-width: 100%;
 }
