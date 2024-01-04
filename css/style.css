@@ -98,12 +98,15 @@ li {
     color: var(--medium-aquamarine);
 }
 
-/* The second section Grow yourself */
+/* For everything blocks */
 .main-wrapper {
     display: flex;
+    flex-direction: column; 
     width: auto;
     justify-content: center; 
 }
+
+/* The second section Grow yourself */
 
 .section-home-header {
     padding-top: 4rem;
@@ -239,3 +242,64 @@ input[type=button] {
 }
 
 /* The third section Students get's job */
+.section-home-job {
+    background-color: transparent;
+}
+
+.job_component {
+    display: flex;
+    position: relative;  /* relative to the page-wrapper */
+    margin-top: 0px;
+    border-radius: 0px;
+}
+
+.job-grid {
+    display: grid;
+    justify-items: stretch;
+    justify-content: stretch;
+    grid-auto-columns: 1fr;
+    gap: 3.25rem;
+    grid-template-columns: 1.25fr 1fr;
+    grid-template-rows: auto;
+}
+
+.job-left-item .job-right-item {
+    display: grid;
+    position: auto;
+    align-content: auto;
+    justify-content: auto;
+}
+
+.job-image {
+    display: grid;
+    width: auto;
+    max-width: 100%;
+}
+
+.Heading2 {
+    margin: 0 0;
+    font-size: 48px;
+    line-height: 140%;
+}
+
+.button {
+    padding: 18px 38px;
+    border: 1px solid #3fba96;
+    border-radius: 4px;
+    background-color: #3fba96;
+    color: white;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+    color: #3fba96;
+}
+
+/* The fourth section How it works */
+.section-home-how-works {
+    
+}
