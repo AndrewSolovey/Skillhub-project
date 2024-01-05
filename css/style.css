@@ -119,11 +119,12 @@ li {
 }
 
 .container-large {
-    display: flex;
+    display: grid;
     margin: 0 auto;
     width: 100%;
     max-width: 73.25rem;
     /* 1172px */
+    //justify-content: center; 
 }
 
 .padding-vertical {
@@ -183,6 +184,7 @@ li {
 .paragraph-normal {
     margin-bottom: 0;
     font-weight: 400;
+    width: auto;
 }
 
 .header-form-wrapper,
@@ -301,5 +303,80 @@ input[type=button] {
 
 /* The fourth section How it works */
 .section-home-how-works {
-    
+    background-color: transparent; 
 }
+
+.how-works-component {
+    position: relative; /* relative to the page-wrapper */
+    margin-top: 0px;
+    background-color: white;
+}
+
+.how-works-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 452px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.how-works-grid {
+    display: grid;
+    justify-items: stretch;
+    justify-content: stretch;
+    grid-auto-columns: 1fr;
+    gap: 16px;
+    grid-template-columns: 1fr 1.25fr;
+    grid-template-rows: auto;
+}
+
+.how-works-item-left {
+    display: grid;
+    position: auto;
+    align-content: auto;
+    justify-content: auto;
+}
+
+.how-works-item-right {
+    display: grid;
+    position: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.how-works-card {
+    display: flex;
+    margin-bottom: 32px;
+    padding: 32px 22px;
+    align-items: flex-start;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 37px 47px 80px 20px rgba(115, 137, 149, 0.52);
+}
+
+.how-works-card2 {
+    display: flex;
+    margin-bottom: 32px;
+    padding: 32px 22px;
+    align-items: flex-start;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.works-card-image {
+    display: flex;
+    max-width: 100%;
+}
+
+.works-card-content {
+    margin-left: 16px;
+}
+
+.Heading3 {
+    margin: 0 0;
+    font-size: 28px;
+    line-height: 140%;
+}
+
+/* The fifth section Popular courses */ 
