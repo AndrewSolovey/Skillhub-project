@@ -27,8 +27,6 @@ body {
     width: 100%;
     height: 6rem;
     /* 96px */
-    padding: 0 2.5rem;
-    /* 40px */
     background-color: transparent;
 }
 
@@ -55,7 +53,8 @@ ul {
 }
 
 li {
-    display: inline;
+    display: inline-flex;
+    /* I'm not sure in this property */
 }
 
 .nav_Link {
@@ -98,13 +97,18 @@ li {
     color: var(--medium-aquamarine);
 }
 
+
+
 /* For everything blocks */
+
 .main-wrapper {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     width: auto;
-    justify-content: center; 
+    justify-content: center;
 }
+
+
 
 /* The second section Grow yourself */
 
@@ -124,16 +128,14 @@ li {
     width: 100%;
     max-width: 73.25rem;
     /* 1172px */
-    //justify-content: center; 
+    justify-content: center;
 }
 
 .padding-vertical {
     padding: 8rem 0 6rem 0;
     /* 128px 96px */
-}
-
-.home-header_component {
-    display: flex;
+    width: 100%;
+    overflow: auto;
 }
 
 .home-header_grid {
@@ -147,6 +149,8 @@ li {
 }
 
 .home-header_content-left .home-header_content-right {
+    /* These classes don't show in F12. Why? */
+    /* Розберись чому не показує і не діють ці класи і потім обє'днай з .job-left-item .job-right-item Властивості однакові */
     display: grid;
     position: auto;
     align-content: center;
@@ -198,11 +202,12 @@ li {
 
 .header-form {
     display: grid;
-    position: relative;  /* relative to main-wrapper */
+    position: relative;
+    /* relative to main-wrapper */
 }
 
 input[type=gsearch] {
-    width: 100%; 
+    width: 100%;
     background-color: white;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -212,13 +217,19 @@ input[type=gsearch] {
     margin: 0;
     padding: 0 12px 0 40px;
     background-image: url('../images/search_icon.png');
-    background-position: 16px auto 0% 12px;
+    background-position: 8px 16px;
     background-repeat: no-repeat;
     font-size: 20px;
 }
 
 input[type=gsearch]:focus {
-    border: 1px solid lightskyblue; 
+    border: 1px solid lightskyblue;
+}
+
+input[type=gsearch]:placeholder {
+    font-size: 20px;
+    font-family: Gilroy;
+    color: green;
 }
 
 input[type=button] {
@@ -241,16 +252,20 @@ input[type=button] {
     display: grid;
     width: 100%;
     max-width: 100%;
+    object-fit: contain;
 }
 
+
+
 /* The third section Students get's job */
-.section-home-job {
+.section-home-job .section-home-how-works {
     background-color: transparent;
 }
 
-.job_component {
+.job_component .query-component {
     display: flex;
-    position: relative;  /* relative to the page-wrapper */
+    position: relative;
+    /* relative to the page-wrapper */
     margin-top: 0px;
     border-radius: 0px;
 }
@@ -266,13 +281,15 @@ input[type=button] {
 }
 
 .job-left-item .job-right-item {
+    /* These classes don't show in F12. Why? */
     display: grid;
     position: auto;
-    align-content: auto;
-    justify-content: auto;
+    align-content: center;
+    justify-content: center;
 }
 
 .job-image {
+    /* Об'єдную з класом .grow_yourself (ті ж самі властивості) і весь макет пливе і порушується. Чому? */
     display: grid;
     width: auto;
     max-width: 100%;
@@ -301,13 +318,12 @@ input[type=button] {
     color: #3fba96;
 }
 
-/* The fourth section How it works */
-.section-home-how-works {
-    background-color: transparent; 
-}
 
+
+/* The fourth section How it works */
 .how-works-component {
-    position: relative; /* relative to the page-wrapper */
+    position: relative;
+    /* relative to the page-wrapper */
     margin-top: 0px;
     background-color: white;
 }
@@ -315,7 +331,7 @@ input[type=button] {
 .how-works-heading {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     max-width: 452px;
     margin: 0 auto;
     text-align: center;
@@ -379,4 +395,168 @@ input[type=button] {
     line-height: 140%;
 }
 
-/* The fifth section Popular courses */ 
+/* The fifth section Popular courses */
+.section-home-popular-courses {
+    background-color: transparent;
+}
+
+.popular-courses-component {
+    position: relative;
+    margin-top: 0px;
+}
+
+.popular-courses-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 452px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.popular-courses-slider .popular-courses-mask {
+    display: flex;
+    position: relative;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    width: auto;
+    align-items: center;
+}
+
+.popular-courses-slide {
+    height: 100%;
+    max-width: 306px;
+    margin-right: 40px;
+    padding-left: 0;
+}
+
+.popular-courses-slide-item {
+    margin-left: 0px;
+    padding: 20px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+}
+
+.Heading4 {
+    margin: 0 0;
+    font-size: 18px;
+    height: 24px;
+}
+
+.course-card-bottom-content {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-review-price {
+    display: flex;
+    margin-top: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-image {
+    max-width: 100%;
+}
+
+.price-text {
+    color: #0a908a;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.student-text {
+    margin-left: 6px;
+    color: #514d4d;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.slider-left .slider-right {
+    /* -- Я не розумію, як тут винести ці блоки поза межі контейнера (щоб стрілки були за курсами) */
+    position: relative;
+    width: 80px;
+    margin: auto;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.left-arrow {
+    /* -- Я не розумію, як тут винести ці блоки поза межі контейнера (щоб стрілки були за курсами) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    inset: 0% auto 0% -76px;
+    top: 0%;
+    bottom: 0%;
+    right: auto;
+    left: -76px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.right-arrow {
+    /* -- Я не розумію, як тут винести ці блоки поза межі контейнера (щоб стрілки були за курсами) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    left: auto;
+    top: 0%;
+    right: -76px;
+    bottom: 0%;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.div-block {
+    display: flex;
+    flex-direction: column;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.19);
+}
+
+/* The sixth section Query */
+.section-home-query {
+    position: relative;
+    background-color: transparent;
+}
+
+.home-query-circle-bg {
+    position: absolute;
+    left: auto;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    display: flex;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.query-grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 0rem;
+    grid-template-columns: 1fr 1.25fr;
+    grid-template-rows: auto;
+}
+
+.query-left-item {
+    display: grid;
+    position: auto;
+}
+
+.query-right-item {
+    position: relative;
+    z-index: 1;
+    margin-left: -192px;
+    padding-left: 0px;
+}
